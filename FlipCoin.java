@@ -1,23 +1,23 @@
 package org.example;
 
-import java.util.Random;
+import java.util.Scanner;
 
-public class FlipCoin {
-    public static void main(String[] args)
-    {
+class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENTER YEAR ");
 
-        Random rnd = new Random();
-        int checkRandom = 2;
-        int intRandom = rnd.nextInt(checkRandom);
+        int a = sc.nextInt();
 
-        if (intRandom == 1)
+        if (((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0))
         {
-            System.out.println("Head");
+            System.out.println("Year is a Leap Year");
         }
         else
         {
-            System.out.println("Tail");
+            System.out.println("Year is Not a Leap Year");
         }
-    }
 
+
+    }
 }
